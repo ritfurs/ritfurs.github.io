@@ -1,5 +1,9 @@
 const splashTexts = [
-    "Hi guys new website"
+    "Hi guys new website!",
+    "Welcome to RitFurs!",
+    "*Random animal noises*!",
+    "Fish!",
+    "Did you nose?"
 ];
 
 
@@ -161,3 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
     creditsBackBtn.addEventListener('click', () => hideInfoPage('creditsPage'));
 
 });
+
