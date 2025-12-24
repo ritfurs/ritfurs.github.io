@@ -84,7 +84,7 @@ body {
 .mc-button {
     background-image: url('stone.png');
     background-repeat: repeat;
-    background-size: 50% auto;
+    background-size: 10%;
     border: 2px solid #000;
     box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.3);
     color: #FFFFFF;
@@ -134,7 +134,7 @@ body {
     z-index: 2;
     background-image: url('stone.png');
     background-repeat: repeat;
-    background-size: 50% auto;
+    background-size: 10%;
     border: 2px solid #000;
     box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.3);
     color: #FFFFFF;
@@ -217,3 +217,4 @@ body {
     }
 
 }
+
