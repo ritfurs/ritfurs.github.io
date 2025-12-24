@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Minecraft', sans-serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#panorama {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: block;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.title-container {
+    position: relative;
+    margin-bottom: 40px;
+    max-width: 90vw;
+}
+
+.title-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+}
+
+.splash-text {
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+    transform: rotate(-20deg);
+    transform-origin: center;
+    font-size: 20px;
+    color: #FFFF00;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    animation: splash-pulse 1s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes splash-pulse {
+    0%, 100% {
+        transform: rotate(-20deg) scale(1);
+    }
+    50% {
+        transform: rotate(-20deg) scale(1.1);
+    }
+}
+
+.splash-text.motion-disabled {
+    animation: none;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.mc-button {
+    background-image: url('stone.png');
+    background-repeat: repeat;
+    background-size: auto;
+    border: 2px solid #000;
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    transition: all 0.1s;
+    text-shadow: 2px 2px 0px rgba(55, 55, 55, 1);
+    font-family: 'Minecraft', sans-serif;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.mc-button:hover {
+    background-image: url('stone.png');
+    filter: brightness(1.15);
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.3), inset 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.mc-button:active {
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(1px);
+}
+
+.large-button {
+    width: 100%;
+}
+
+.small-buttons {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.small-button {
+    flex: 1;
+}
+
+.motion-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    background-image: url('stone.png');
+    background-repeat: repeat;
+    background-size: auto;
+    border: 2px solid #000;
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-family: 'Minecraft', sans-serif;
+    text-shadow: 2px 2px 0px rgba(55, 55, 55, 1);
+    transition: all 0.1s;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.motion-toggle:hover {
+    background-image: url('stone.png');
+    filter: brightness(1.15);
+}
+
+.motion-toggle:active {
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .title-image {
+        max-width: 400px;
+    }
+    
+    .splash-text {
+        font-size: 16px;
+        bottom: -15px;
+        right: -20px;
+    }
+    
+    .mc-button {
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+    
+    .button-container {
+        gap: 10px;
+    }
+    
+    .small-buttons {
+        gap: 10px;
+    }
+    
+    .motion-toggle {
+        font-size: 14px;
+        padding: 10px 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-image {
+        max-width: 300px;
+    }
+    
+    .splash-text {
+        font-size: 14px;
+        bottom: -10px;
+        right: -15px;
+    }
+    
+    .mc-button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .small-buttons {
+        flex-direction: column;
+    }
+    
+    .motion-toggle {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

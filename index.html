@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RitFurs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+<body>
+    <canvas id="panorama"></canvas>
+    
+    <div class="content">
+        <div class="title-container">
+            <img src="title.png" alt="Title" class="title-image" id="titleImage">
+            <div class="splash-text" id="splashText"></div>
+        </div>
+        
+        <div class="button-container">
+            <a href="#join" class="mc-button large-button">Join RitFurs</a>
+            <div class="small-buttons">
+                <a href="#about" class="mc-button small-button">About</a>
+                <a href="#credits" class="mc-button small-button">Credits</a>
+            </div>
+        </div>
+    </div>
+    
+    <button class="motion-toggle" id="motionToggle">Disable Motion</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
