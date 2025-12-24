@@ -3,7 +3,7 @@ const splashTexts = [
     "Welcome to RitFurs!",
     "*Random animal noises*!",
     "Fish!",
-    "Did you nose?"
+    "Did you nose?",
 ];
 
 
@@ -165,4 +165,5 @@ document.addEventListener('DOMContentLoaded', () => {
     creditsBackBtn.addEventListener('click', () => hideInfoPage('creditsPage'));
 
 });
+
 
