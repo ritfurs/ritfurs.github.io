@@ -1,14 +1,5 @@
 const splashTexts = [
-    "Also try Terraria!",
-    "Awesome community!",
-    "Now with more fun!",
-    "Pixel perfect!",
-    "Bringing people together!",
-    "Made with love!",
-    "Join the adventure!",
-    "Furry friendly!",
-    "RIT approved!",
-    "Block by block!"
+    "Hi guys new website"
 ];
 
 
@@ -168,4 +159,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const creditsBackBtn = document.getElementById('creditsBackBtn');
     creditsBackBtn.addEventListener('click', () => hideInfoPage('creditsPage'));
+
 });
