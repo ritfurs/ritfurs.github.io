@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RitFurs</title>
+    <title>RitFurs - Minecraft Style</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
 </head>
-<body>
+<body class="loading">
     <canvas id="panorama"></canvas>
     
-    <div class="content">
+    <div class="content" id="mainContent">
         <div class="title-container">
             <img src="title.png" alt="Title" class="title-image" id="titleImage">
             <div class="splash-text" id="splashText"></div>
@@ -19,13 +19,43 @@
         <div class="button-container">
             <a href="#join" class="mc-button large-button">Join RitFurs</a>
             <div class="small-buttons">
-                <a href="#about" class="mc-button small-button">About</a>
-                <a href="#credits" class="mc-button small-button">Credits</a>
+                <button class="mc-button small-button" id="aboutBtn">About</button>
+                <button class="mc-button small-button" id="creditsBtn">Credits</button>
             </div>
         </div>
     </div>
     
+
+    <div class="info-page" id="aboutPage">
+        <div class="info-content">
+            <h1 class="info-title">About RitFurs</h1>
+            <p class="info-text">
+                Info Placeholder Text
+            </p>
+            <button class="mc-button back-button" id="aboutBackBtn">Back</button>
+        </div>
+    </div>
+    
+
+    <div class="info-page" id="creditsPage">
+        <div class="info-content">
+            <h1 class="info-title">Credits</h1>
+            <p class="info-text">
+                Placeholder text
+            </p>
+            <button class="mc-button back-button" id="creditsBackBtn">Back</button>
+        </div>
+    </div>
+    
     <button class="motion-toggle" id="motionToggle">Disable Motion</button>
+    
+    <div style="display: none;">
+        <img src="stone.png" id="preloadStone">
+        <img src="stone_color.png" id="preloadStoneColor">
+        <img src="dirt.png" id="preloadDirt">
+        <img src="title.png" id="preloadTitle">
+        <img src="Street View 360.jpg" id="preloadPanorama">
+    </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
